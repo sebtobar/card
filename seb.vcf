@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Tobar;Seb;;;
+FN:Seb Tobar
+ORG:Source Marketing
+TITLE:Founder
+TEL;TYPE=CELL,VOICE:+447837816959
+EMAIL;TYPE=INTERNET,PREF:seb@sourcemarketing.co
+item1.URL:https://sourcemarketing.co
+item1.X-ABLabel:Website
+item2.URL:https://www.linkedin.com/in/sebastian-tobar
+item2.X-ABLabel:LinkedIn
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/sebastian-tobar
+REV:2026-09-07T00:00:00Z
+END:VCARD

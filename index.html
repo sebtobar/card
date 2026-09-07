@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seb Tobar — Source Marketing</title>
+<meta name="description" content="Seb Tobar, Founder of Source Marketing. Save my contact details.">
+<meta property="og:title" content="Seb Tobar — Source Marketing">
+<meta property="og:description" content="Founder, Source Marketing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0D2430;
+    --surface:#16323F;
+    --paper:#F1EDE6;
+    --muted:#93A9B3;
+    --gold:#E3B23C;
+    --rule:rgba(241,237,230,.14);
+  }
+
+  *{box-sizing:border-box;}
+
+  html,body{margin:0;padding:0;}
+
+  body{
+    background:var(--ink);
+    color:var(--paper);
+    font-family:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:16px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    min-height:100svh;
+    display:flex;
+    justify-content:center;
+  }
+
+  .card{
+    width:100%;
+    max-width:29rem;
+    padding:3.5rem 1.75rem 1.5rem;
+    display:flex;
+    flex-direction:column;
+    min-height:100svh;
+  }
+
+  /* ---- name ---- */
+
+  .name{
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:700;
+    font-size:clamp(3.5rem,17vw,5.25rem);
+    line-height:.88;
+    letter-spacing:-.025em;
+    margin:0;
+    color:var(--paper);
+  }
+
+  .name span{display:block;}
+
+  .name span:last-child{color:var(--gold);}
+
+  .role{
+    margin:1.5rem 0 0;
+    font-size:1.0625rem;
+    font-weight:500;
+    color:var(--paper);
+  }
+
+  .role em{
+    display:block;
+    font-style:normal;
+    font-weight:400;
+    color:var(--muted);
+  }
+
+  /* ---- channels ---- */
+
+  .channels{
+    margin:2.75rem 0 0;
+    padding:0;
+    list-style:none;
+    border-top:1px solid var(--rule);
+  }
+
+  .channels li{border-bottom:1px solid var(--rule);}
+
+  .channels a{
+    display:flex;
+    align-items:baseline;
+    gap:1.25rem;
+    padding:.9375rem .25rem;
+    color:var(--paper);
+    text-decoration:none;
+  }
+
+  .channels a:hover .value{color:var(--gold);}
+
+  .channels a:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+    border-radius:2px;
+  }
+
+  .key{
+    flex:0 0 5.25rem;
+    font-size:.8125rem;
+    font-weight:500;
+    color:var(--muted);
+  }
+
+  .value{
+    font-size:1rem;
+    font-weight:400;
+    overflow-wrap:anywhere;
+  }
+
+  /* ---- action ---- */
+
+  .action{
+    margin-top:auto;
+    padding-top:2.5rem;
+  }
+
+  .save{
+    display:block;
+    width:100%;
+    padding:1.0625rem 1.5rem;
+    background:var(--gold);
+    color:var(--ink);
+    border:0;
+    border-radius:.5rem;
+    font-family:inherit;
+    font-size:1.0625rem;
+    font-weight:600;
+    text-align:center;
+    text-decoration:none;
+    cursor:pointer;
+  }
+
+  .save:focus-visible{
+    outline:2px solid var(--paper);
+    outline-offset:3px;
+  }
+
+  .note{
+    margin:.875rem 0 0;
+    font-size:.8125rem;
+    color:var(--muted);
+    text-align:center;
+    min-height:1.25rem;
+  }
+
+  /* ---- one page-load moment ---- */
+
+  @media (prefers-reduced-motion:no-preference){
+    .reveal{
+      opacity:0;
+      transform:translateY(.5rem);
+      animation:rise .7s cubic-bezier(.2,.7,.3,1) forwards;
+    }
+    .reveal:nth-child(1){animation-delay:.05s;}
+    .reveal:nth-child(2){animation-delay:.16s;}
+    .reveal:nth-child(3){animation-delay:.27s;}
+  }
+
+  @keyframes rise{to{opacity:1;transform:none;}}
+</style>
+</head>
+<body>
+
+<main class="card">
+
+  <h1 class="name reveal"><span>Seb</span><span>Tobar</span></h1>
+
+  <p class="role reveal">Founder<em>Source Marketing</em></p>
+
+  <ul class="channels reveal">
+    <li><a href="tel:+447837816959"><span class="key">Mobile</span><span class="value">+44 7837 816 959</span></a></li>
+    <li><a href="mailto:seb@sourcemarketing.co"><span class="key">Email</span><span class="value">seb@sourcemarketing.co</span></a></li>
+    <li><a href="https://sourcemarketing.co"><span class="key">Website</span><span class="value">sourcemarketing.co</span></a></li>
+    <li><a href="https://www.linkedin.com/in/sebastian-tobar"><span class="key">LinkedIn</span><span class="value">sebastian-tobar</span></a></li>
+  </ul>
+
+  <div class="action">
+    <a class="save" id="save" href="seb.vcf" download="seb-tobar.vcf">Save my contact</a>
+    <p class="note" id="note"></p>
+  </div>
+
+</main>
+
+<script>
+(function(){
+  var vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "N:Tobar;Seb;;;",
+    "FN:Seb Tobar",
+    "ORG:Source Marketing",
+    "TITLE:Founder",
+    "TEL;TYPE=CELL:+447837816959",
+    "EMAIL:seb@sourcemarketing.co",
+    "URL:https://sourcemarketing.co",
+    "item1.URL:https://www.linkedin.com/in/sebastian-tobar",
+    "item1.X-ABLabel:LinkedIn",
+    "END:VCARD"
+  ].join("\r\n");
+
+  var link = document.getElementById("save");
+  var note = document.getElementById("note");
+
+  // Build the file in the browser so the MIME type is set here,
+  // not by the server. Falls back to the plain seb.vcf href.
+  if (window.Blob && window.URL && "download" in document.createElement("a")) {
+    var url = URL.createObjectURL(new Blob([vcard], {type:"text/vcard;charset=utf-8"}));
+    link.href = url;
+    link.addEventListener("click", function(){
+      note.textContent = "Opening in your contacts app";
+    });
+  }
+})();
+</script>
+
+</body>
+</html>
